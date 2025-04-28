@@ -1,0 +1,8 @@
+(executable
+ (public_name bug_reports)
+ (name main)
+ (libraries bug_reports core_unix.command_unix)
+ (preprocess
+  (pps ppx_jane -check))
+ (package bug_reports)
+ (promote (until-clean)))

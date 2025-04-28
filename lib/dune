@@ -1,0 +1,18 @@
+(library
+ (name bug_reports)
+ (libraries
+  async
+  core
+  core.command
+  core.univ_map
+  core_kernel.bus
+  core_kernel.nonempty_list
+  core_kernel.pairing_heap
+  core_kernel.reversed_list
+  core_kernel.uuid
+  core_kernel.vec
+  ;; ppx_expect.config_types is necessary for expect tests to work properly.
+  ppx_expect.config_types)
+ (inline_tests)
+ (preprocess
+  (pps ppx_jane -check)))
